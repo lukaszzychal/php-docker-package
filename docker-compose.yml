@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+    sc5_php:
+        build: ./docker/php
+        volumes:
+            - .:/var/www/
+        networks:
+         - sc5-network
+
+networks:
+  sc5-network:
+    driver: bridge        
+ 
